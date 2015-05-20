@@ -1,5 +1,22 @@
 angular.module('shortly.links', [])
+//include scope and links into dependecy array
+
+// angular.module('shortly.services')
+
 
 .controller('LinksController', function ($scope, Links) {
-  // Your code here
+    // angular.extend($scope, Links)
+    $scope.data = {};
+    $scope.getLinks = function(){
+    Links.getLinks()
+    .then(function(data){
+      console.log("Getlinks DATATA:",data)
+      $scope.data = data;
+    })
+    .catch(function(err){
+      console.error(error)
+    });
+  };
+
+    $scope.getLinks();
 });

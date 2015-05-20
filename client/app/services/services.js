@@ -1,7 +1,23 @@
 angular.module('shortly.services', [])
-
+// angular.module('app', ['ngRoute'])
+// angular.module('shortly.links')
+// .controller('services', function($scope, $http){
 .factory('Links', function ($http) {
-  // Your code here
+  var get = function(links) {
+      return $http({
+      method: 'GET',
+      url: '/api/links',
+      data: links
+      }).then(function(res) {
+        console.log(res.data)
+          return res.data
+      })
+    };
+  
+    return {
+      getLinks: get
+    };
+
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
