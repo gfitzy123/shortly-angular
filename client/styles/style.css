@@ -2,8 +2,13 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  background-image: url('http://www.hdwallpapersn.com/wp-content/uploads/2015/04/red_panda_wallpapers2.jpg')
 }
 
+.headTitle{
+  opacity: 0.5;
+  float: right;
+}
 a {
   color: #333;
   font-size: 14px;
@@ -61,6 +66,8 @@ h1 {
 }
 
 .link:hover {
+  opacity: 0.7;
+  cursor: pointer;
   background-color: #efe;
 }
 

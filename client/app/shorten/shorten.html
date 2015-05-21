@@ -1,12 +1,12 @@
 <div id='container' ng-controller="ShortenController">
   <form name="shorten" ng-submit='addLink()'>
   <label>URL:
-    <input type='text' name='input' ng-model='link' required>
+    <input type='url' name='input' ng-model='link' placeholder='Enter URL here!' required>
   <label>
   <div role='alert'>
   <span ng-show='shorten.input.$error.url'>Not valid Url!</span>
   </div>
-    <button>Shorten Url</button>
+    <button type='submit' value='shorten'>Shorten Url</button>
   </form>
 
 

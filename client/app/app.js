@@ -23,6 +23,10 @@ angular.module('shortly', [
         templateUrl: 'app/links/links.html',
         controller: 'LinksController'
       })
+      .when('/logout', {
+        templateUrl: 'app/auth/signin.html',
+        controller: 'AuthController'
+      })
       .otherwise({
         redirectTo: '/links.html',
       })
