@@ -1,5 +1,11 @@
 <div ng-controller="LinksController" id='container'>
   <ul>
-  <div>{{data.links}}</div>
+  <table>
+  <tr ng-repeat='link in data.links | filter:search'>
+    <td>{{link.url}}</td>
+    <td>{{link.title}}</td>
+    <td>{{link.visits}}</td>
+  </tr>
+</table>
   </ul>
 </div>
