@@ -11,7 +11,7 @@ angular.module('shortly.links', [])
     Links.getLinks()
     .then(function(data){
       console.log("Getlinks DATATA:",data)
-      $scope.data = data;
+      $scope.data.links = JSON.parse(data);
     })
     .catch(function(err){
       console.error(error)

@@ -1,7 +1,6 @@
 angular.module('shortly.services', [])
-// angular.module('app', ['ngRoute'])
-// angular.module('shortly.links')
-// .controller('services', function($scope, $http){
+
+
 .factory('Links', function ($http) {
   var get = function(links) {
       return $http({
@@ -13,9 +12,22 @@ angular.module('shortly.services', [])
           return res.data
       })
     };
+
+  var post = function(links){
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: links
+    })
+    .then(function (res) {
+      return res.data;
+    });
+
+  }
   
     return {
-      getLinks: get
+      getLinks: get,
+      shorten: post
     };
 
 })

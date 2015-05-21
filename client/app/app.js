@@ -6,15 +6,26 @@ angular.module('shortly', [
   'ngRoute'
 ])
 .config(function($routeProvider, $httpProvider) {
-  $routeProvider
-    .when('/signin', {
-      templateUrl: 'app/auth/signin.html',
-      controller: 'AuthController'
-    })
-    .when('/signup', {
-      templateUrl: 'app/auth/signup.html',
-      controller: 'AuthController'
-    })
+    $routeProvider
+      .when('/signup', {
+        templateUrl: 'app/auth/signup.html',
+        controller: 'AuthController'
+      })
+      .when('/signin', {
+        templateUrl: 'app/auth/signin.html',
+        controller: 'AuthController'
+      })
+      .when('/shorten', {
+        templateUrl: 'app/shorten/shorten.html',
+        controller: 'ShortenController'
+      })
+      .when('/links', {
+        templateUrl: 'app/links/links.html',
+        controller: 'LinksController'
+      })
+      .otherwise({
+        redirectTo: 'app/links/links.html',
+      })
     // Your code here
 
     // We add our $httpInterceptor into the array
