@@ -1,8 +1,8 @@
 <div id='signin' ng-controller='AuthController'>
   <h1>signin</h1>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+    <input type='email' ng-minlength='5' ng-maxlength='30' ng-model='user.email'>
+    <input type="password" ng-minlength='5' ng-maxlength='30' ng-model='user.password'>
     <button>signin</button>
   </form>
   <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>

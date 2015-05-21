@@ -24,7 +24,7 @@ angular.module('shortly', [
         controller: 'LinksController'
       })
       .otherwise({
-        redirectTo: 'app/links/links.html',
+        redirectTo: '/links.html',
       })
     // Your code here
 
