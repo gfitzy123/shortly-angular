@@ -1,15 +1,15 @@
 <div ng-controller="LinksController" id='container'>
-
   <input type='text' ng-model='search' placeholder='Search'>
-
+  <tbody class="table table-striped">
   <div class='link' ng-repeat="link in data.links | filter:search | orderBy: '-visits'">
-    <img src="assets/redirect_icon.png">
+    <img class='cat' src="https://s-media-cache-ak0.pinimg.com/236x/5c/b1/93/5cb193512a22900940e6f0192cda5718.jpg">
     <div class='info'>
     <div class='original'>{{link.url}}</div>
     <div class='title'>{{link.title}}</div>
     <div class='visits'>
       <span class='count'>{{link.visits}}</span>Visits
     </div>
+    </tbody>
     <a href='http://localhost:8000/api/links/{{ link.code }}'>{{ link.base_url }}/{{ link.code}}</a>
     </div>
   </div>

@@ -7,6 +7,7 @@ angular.module('shortly.shorten', [])
     .then(function(data){
       console.log("Getting links to shorten: " + data)
       $scope.link = data;
+      $location.path('/links');
     }).catch(function(err){
       console.log('tried to shorten and failed')
       console.error(err)

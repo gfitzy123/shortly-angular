@@ -6,15 +6,21 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
+  <div class='tabs'>
   <form action='#/signin'>
     <input type='submit' value='Sign-In'>
   </form>
   <form action='#/signup'>
     <input type='submit' value='Sign-Up'>
   </form>
-  <div>
   <form action='#/signout'>
-    <input type='submit' value='Sign-Out'>
+    <input type='submit' value='Sign-Out' ng-submit='signout()'>
+  </form>
+  <form action='#/shorten'>
+    <input type='submit' value='Shorten'>
+  </form>
+  <form action='#/links'>
+    <input type='submit' value='Links'>
   </form>
   </div>
     <h1 class='headTitle'>Shortly</h1>
@@ -24,10 +30,12 @@
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-
+    <script src-'lib/angular-animate/angular-animate.js'></script>
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>
     <script src="app/shorten/shorten.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="app/services/services.js"></script>
     <script src="app/app.js"></script>
   </body>

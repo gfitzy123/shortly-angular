@@ -6,8 +6,12 @@ body {
 }
 
 .headTitle{
-  opacity: 0.5;
-  float: right;
+  font-size: 80px;
+  float: left;
+   color: white;
+   background: url('http://mtv.mtvnimages.com/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/01/snow-1420553386.gif') no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 a {
   color: #333;
@@ -103,10 +107,11 @@ h1 {
 form {
   margin: 10px;
 }
-
+.tabs{
+  display: inline;
+}
 input {
-  width: 360px;
-  display: block;
+  width: 150px;
   font-size: 13px;
   padding: 5px;
   margin-bottom: 5px;
@@ -137,11 +142,21 @@ input[type=url]:focus {
   height: 50px;
 }
 
-.creator form {
+.creator{
   float: left;
   height: 80px;
 }
 
+
+.tabs{
+float:right;  
+}
+
+.cat{
+  border-radius: 50%;
+  width: 5%;
+  height: 5%;
+}
 .creator img.spinner {
   height: 46px;
   margin-bottom: 5px;
